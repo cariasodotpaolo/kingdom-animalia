@@ -12,8 +12,18 @@ public class ChickenTest {
     @Test
     public void whenChickenSingsThenPrint() {
 
-        Bird chicken = new Chicken();
+        Chicken chicken = new Chicken();
         String message = chicken.sing();
+
+        assertEquals("Cluck, cluck", message);
+        System.out.println(message);
+    }
+
+    @Test
+    public void testChickenIsABird() {
+
+        Bird bird = new Chicken();
+        String message = bird.sing();
 
         assertEquals("Cluck, cluck", message);
         System.out.println(message);
@@ -22,8 +32,18 @@ public class ChickenTest {
     @Test
     public void whenChickenWalksThenPrint() {
 
-        Animal chicken = new Chicken();
+        Chicken chicken = new Chicken();
         String message = chicken.walk();
+
+        assertEquals("I am walking", message);
+        System.out.println(message);
+    }
+
+    @Test
+    public void testChickenIsAnAnimal() {
+
+        Animal animal = new Chicken();
+        String message = animal.walk();
 
         assertEquals("I am walking", message);
         System.out.println(message);
