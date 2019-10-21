@@ -1,13 +1,12 @@
 package io.exam.animal;
 
-import io.exam.animal.model.impl.BirdImpl;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class MainApplication {
 
     public static void main(String[] args) {
-        BirdImpl bird = new BirdImpl();
-        bird.walk();
-        bird.fly();
-        bird.sing();
+        SpringApplication.run(MainApplication.class, args);
     }
 }
