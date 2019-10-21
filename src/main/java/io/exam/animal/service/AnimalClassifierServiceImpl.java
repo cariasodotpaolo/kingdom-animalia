@@ -1,17 +1,26 @@
 package io.exam.animal.service;
 
 import io.exam.animal.model.*;
+import io.exam.animal.repository.AnimalRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-
+@Service
 public class AnimalClassifierServiceImpl implements AnimalClassifierService {
 
+    private AnimalRepository animalRepository;
+
+    @Autowired
+    public AnimalClassifierServiceImpl(AnimalRepository animalRepository) {
+        this.animalRepository = animalRepository;
+    }
+
     @Override
-    public int countFlyingAnimals(List<Animal> animals) {
+    public int countFlyingAnimals() {
 
         int count = 0;
 
-        for (Animal animal: animals) {
+        for (Animal animal: animalRepository.getAnimals()) {
 
             if(animal instanceof FlyingAnimal) {
                 count++;
@@ -23,11 +32,11 @@ public class AnimalClassifierServiceImpl implements AnimalClassifierService {
     }
 
     @Override
-    public int countSingingAnimals(List<Animal> animals) {
+    public int countSingingAnimals() {
 
         int count = 0;
 
-        for (Animal animal: animals) {
+        for (Animal animal: animalRepository.getAnimals()) {
 
             if(animal instanceof Bird) {
                 count++;
@@ -38,11 +47,11 @@ public class AnimalClassifierServiceImpl implements AnimalClassifierService {
     }
 
     @Override
-    public int countWalkingAnimals(List<Animal> animals) {
+    public int countWalkingAnimals() {
 
         int count = 0;
 
-        for (Animal animal: animals) {
+        for (Animal animal: animalRepository.getAnimals()) {
 
             if(animal instanceof WalkingAnimal) {
                 count++;
@@ -53,11 +62,11 @@ public class AnimalClassifierServiceImpl implements AnimalClassifierService {
     }
 
     @Override
-    public int countSwimmingAnimals(List<Animal> animals) {
+    public int countSwimmingAnimals() {
 
         int count = 0;
 
-        for (Animal animal: animals) {
+        for (Animal animal: animalRepository.getAnimals()) {
 
             if(animal instanceof SwimmingAnimal) {
                 count++;

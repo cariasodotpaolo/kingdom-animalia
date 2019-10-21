@@ -1,15 +1,11 @@
 package io.exam.animal.service;
 
-import io.exam.animal.model.Animal;
-
-import java.util.List;
-
 public interface AnimalClassifierService {
-    int countFlyingAnimals(List<Animal> animals);
+    int countFlyingAnimals();
 
-    int countSingingAnimals(List<Animal> animals);
+    int countSingingAnimals();
 
-    int countWalkingAnimals(List<Animal> animals);
+    int countWalkingAnimals();
 
-    int countSwimmingAnimals(List<Animal> animals);
+    int countSwimmingAnimals();
 }
