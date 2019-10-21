@@ -1,6 +1,6 @@
 package test.io.exam.animal.model;
 
-import io.exam.animal.model.Animal;
+import io.exam.animal.model.WalkingAnimal;
 import io.exam.animal.model.Bird;
 import io.exam.animal.model.FlyingBird;
 import io.exam.animal.model.impl.Duck;
@@ -43,8 +43,8 @@ public class DuckTest {
     @Test
     public void testDuckIsAnAnimal() {
 
-        Animal animal = new Duck();
-        String message = animal.walk();
+        WalkingAnimal walkingAnimal = new Duck();
+        String message = walkingAnimal.walk();
 
         assertEquals("I am walking", message);
         System.out.println(message);

@@ -1,6 +1,6 @@
 package test.io.exam.animal.model;
 
-import io.exam.animal.model.Animal;
+import io.exam.animal.model.WalkingAnimal;
 import io.exam.animal.model.Bird;
 import io.exam.animal.model.impl.Chicken;
 import org.junit.jupiter.api.Test;
@@ -42,8 +42,8 @@ public class ChickenTest {
     @Test
     public void testChickenIsAnAnimal() {
 
-        Animal animal = new Chicken();
-        String message = animal.walk();
+        WalkingAnimal walkingAnimal = new Chicken();
+        String message = walkingAnimal.walk();
 
         assertEquals("I am walking", message);
         System.out.println(message);
