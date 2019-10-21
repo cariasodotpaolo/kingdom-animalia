@@ -1,6 +1,5 @@
 package io.exam.animal.model;
 
-public interface FlyingBird extends Bird {
+public interface FlyingBird extends Bird, FlyingAnimal {
 
-    String fly();
 }
