@@ -1,6 +1,8 @@
 package io.exam.animal.model.impl;
 
-public class Caterpillar implements CrawlingInsect {
+import io.exam.animal.model.Insect;
+
+public class Caterpillar implements Insect {
 
     @Override
     public String walk() {
