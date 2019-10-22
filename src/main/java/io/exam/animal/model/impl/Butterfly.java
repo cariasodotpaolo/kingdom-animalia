@@ -1,5 +1,7 @@
 package io.exam.animal.model.impl;
 
+import io.exam.animal.model.FlyingInsect;
+
 public class Butterfly extends Caterpillar implements FlyingInsect {
 
     @Override
